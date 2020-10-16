@@ -23,7 +23,7 @@ Następnie pobierz z mojego repozytorium na Githubie  konfigurację Webpacka. Um
 
 https://github.com/bartcis/webpack4/tree/master
 
-Będąc w folderze projektu w terminalu uruchom komendę yarn install by zainstalować wszystkie potrzebne pakiety.
+Będąc w folderze projektu w terminalu uruchom komendę `yarn install` by zainstalować wszystkie potrzebne pakiety.
 
 Zanim uruchomisz Webpacka to przeczytaj ten wpis do końca bo wytłumaczę dalej co i jak.
 
@@ -35,10 +35,10 @@ I. Wszystkie pakiety są zdefiniowane w pliku package.json.
 Na jego podstawie Yarn instaluje co trzeba. Tam też definiujesz komendy którymi będziesz uruchamiać Webpacka:
 
 JavaScript4 lines
-'"scripts": {
+`"scripts": {
     "dev": "webpack --mode development --watch",
     "build": "webpack --mode production --watch"
-},'
+},`
 
 II. Webpack jest konfigurowany w pliku webpack.config.js
 
@@ -52,26 +52,27 @@ V. Zasoby z Twoim kodem JS i SASS są kompilowane do plików wykorzystywanych pr
 Pojedyncze uruchomienie
 
 W trybie development czyli bez minifikacji i uglifikacji JS. To ułatwia debugowanie
-yarn dev
+`yarn dev`
 
 Lub w trybie builda czyli wyjściowy plik JS jest nieczytelny i trudniej debugować
-yarn build
+`yarn build`
 
 Uruchomienie ciągłe
 
-yarn dev --watch
+`yarn dev --watch`
 
-yarn build --watch
+`yarn build --watch`
 
 postcss.config.js
+
 PostCSS jest mega. Posiada masę narzędzi usprawniających pracę z CSS. Jeśli chcesz dodać jakiś konkretny moduł po prostu dodaj go do pliku konfiguracyjnego:
 
-module.exports = {
+`module.exports = {
     plugins: [
         require('autoprefixer'),
         require('cssnano')
     ]
-}
+}`
 
 A potem jeszcze zainstaluj odpowiedni pakiet np.
 yarn add autoprefixer
