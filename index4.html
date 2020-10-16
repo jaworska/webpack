@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Pierwszy komponent w React.js</title>
+    <script src="https://unpkg.com/react/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone/babel.js"></script>
+</head>
+
+<body>
+<div id="app"></div>
+<script type="text/babel">
+
+    // function MojKomponent() {
+    //     return (
+    //         <div>
+    //             <h1>Witaj, świecie!</h1>
+    //             <h2>Jestem ambitna/y, więc przerabiam kurs React.js!</h2>
+    //         </div>
+    //     );
+    // }
+    //
+    // function MojKomponent2() {
+    //     return (
+    //         <div>
+    //             <h1>Bonjour, le monde!</h1>
+    //             <h2>Jestem ambitna/y, więc przerabiam kurs React.js!</h2>
+    //         </div>
+    //     );
+    // }
+
+    function MojKomponent({ title = "Modal", content }) {
+        return (
+            <div>
+                <dialog open>
+                    <h1>{title}</h1>
+                    <p>{content}</p>
+                </dialog>
+            </div>
+        );
+    }
+
+    ReactDOM.render(
+        <MojKomponent
+            title="elooo"
+            content="To było prostsze niż by się mogło wydawać, prawda?"
+        />,
+        document.getElementById('app')
+    );
+    // ReactDOM.render(
+    //     <div>
+    //         <h1>Bonjour le monde</h1>
+    //         <h2>Jestem ambitna/y, więc przerabiam kurs React.js!</h2>
+    //     </div>,
+    //     document.getElementById('app')
+    // );
+</script>
+</body>
+
+</html>
